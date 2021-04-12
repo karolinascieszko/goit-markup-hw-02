@@ -7,7 +7,10 @@
   --main-font-color: #212121;
   --font-on-dark-theme-color: #ffffff;
   --font-in-description-color: #757575;
-  --background-color: #2f303a;
+  --background-color-dark: #2f303a;
+  --background-color-light: #ffffff;
+  --background-color-selection: #c8e1ff;
+  --font-contact-footer-color: rgba(255, 255, 255, 0.6);
 }
 body {
   font-family: var(--main-font) var(--main-font-color);
@@ -21,11 +24,14 @@ body {
   text-decoration: none;
   letter-spacing: 0.03em;
 }
-.web {
+.logo-first-word {
   color: var(--main-color);
 }
-.studio {
+.logo-second-word-light-theme {
   color: var(--main-font-color);
+}
+.logo-second-word-dark-theme {
+  color: var(--font-on-dark-theme-color);
 }
 
 .navigation-list-item-link,
@@ -46,13 +52,42 @@ body {
 .modal-btn:hover,
 .modal-btn:focus,
 .modal-btn:active,
-.address-list-item-link:hover,
-.address-list-item-link:focus,
-.address-list-item-link:active {
+.address-list-item-link-street:hover,
+.address-list-item-link-street:focus,
+.address-list-item-link-street:active,
+.address-list-item-link-e-mail:hover,
+.address-list-item-link-e-mail:focus,
+.address-list-item-link-e-mail:active,
+.address-list-item-link-phone-number:hover,
+.address-list-item-link-phone-number:focus,
+.address-list-item-link-phone-number:active {
   color: var(--main-color);
 }
 .contact-list-item-link {
   color: var(--font-in-description-color);
+}
+.hero,
+.footer {
+  background-color: var(--background-color-dark);
+}
+.header,
+.advantages,
+.about-us,
+.team,
+.filters,
+.projects {
+  background-color: var(--background-color-light);
+}
+.secondary-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-font-color);
+}
+::selection {
+  background-color: var(--background-color-selection);
 }
 /*===== END COMPONENTS=====*/
 /*===== HEADER =====*/
@@ -77,9 +112,6 @@ body {
   background-color: var(--main-color);
   cursor: pointer;
 }
-.hero {
-  background-color: var(--background-color);
-}
 
 /*===== END HERO =====*/
 /*===== LOREM IPSUM =====*/
@@ -100,14 +132,7 @@ body {
 
 /*===== END LOREM IPSUM =====*/
 /*===== ABOUT US =====*/
-.secondary-header {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--main-font-color);
-}
+
 /*===== END ABOUT US =====*/
 /*===== OUR TEAM =====*/
 .team-list-item-name {
@@ -129,14 +154,18 @@ body {
 .address {
   font-style: normal;
 }
-.address-list-item-link {
+.address-list-item-link-street {
   font-size: 14px;
   line-height: 1.714;
   color: var(--font-on-dark-theme-color);
   text-decoration: none;
 }
-.footer {
-  background-color: var(--background-color);
+.address-list-item-link-e-mail,
+.address-list-item-link-phone-number {
+  font-size: 14px;
+  line-height: 1.714;
+  color: var(--font-contact-footer-color);
+  text-decoration: none;
 }
 
 /*===== PORTFOLIO =====*/
@@ -149,7 +178,8 @@ body {
   color: var(--main-font-color);
 }
 .buttons-list-item-name:hover,
-.buttons-list-item-name:focus {
+.buttons-list-item-name:focus,
+.buttons-list-item-name:active {
   color: var(--font-on-dark-theme-color);
   background-color: var(--main-color);
   cursor: pointer;
@@ -165,7 +195,7 @@ body {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--font-in-description-color);
 }
 
 /*===== END PORTFOLIO =====*/
